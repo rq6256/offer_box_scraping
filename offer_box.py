@@ -31,13 +31,13 @@ def get_info(html):
         source     = item.find("p", attrs={"class":"p-result_source"})
         updated_at = item.find("p", attrs={"class":"p-result_updatedAt_hyphen"})
 
-        # 会社名が非公開の場合はskip
-        if name: name = name.text.strip()
-        else: continue
+        # # 会社名が非公開の場合はskip
+        # if name: name = name.text.strip()
+        # else: continue
 
-        # 既知の会社はskip
-        if name in seen: continue
-        seen.append(name)
+        # # 既知の会社はskip
+        # if name in seen: continue
+        # seen.append(name)
 
         job        = job.text.strip() if job else "公開していません"
         area       = area.text.strip() if area else "公開していません"
